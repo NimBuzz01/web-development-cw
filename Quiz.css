@@ -32,7 +32,6 @@ body{
     padding: 20px;
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 #FCA31f;
     border-radius: 10px;
-    display:block;
 }
 
 .questionNumber, .infoTitle{
@@ -44,6 +43,9 @@ hr {
     margin-bottom: 10px;
     margin-top: 10px;
 }
+.hr{
+    border: 2px solid #14213D;
+}
 
 ul {
     list-style:none;
@@ -54,7 +56,6 @@ ul {
 .answer {
     padding:10px;
     background:#f7f7f7;
-    margin: 0 0 5px;
 }
 
 .buttons {
@@ -91,7 +92,9 @@ ul {
 }
 
 .corAns{
-    width: 100%;
+    border-radius: 15px;
+    padding: 8px;
+
 }
 
 #progressBar {
@@ -132,4 +135,7 @@ ul {
 #backTop {
     color: white;
     font-size: 15px;
+}
+#backTop:hover {
+    color: #FCA31f;
 }
