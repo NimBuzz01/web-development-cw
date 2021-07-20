@@ -1,8 +1,6 @@
 /* Hide All Content Except Main Page */
-.header,
 .questionContainer,
-.resultContainer,
-#backButton {
+.resultContainer {
     display:none;
 }
 

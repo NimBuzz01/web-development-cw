@@ -3,9 +3,7 @@
 /* Start Quiz Function */
 function startQuiz() {
     document.getElementById("infoContainer").style.display = "none";
-    document.getElementById("header").style.display = "block";
     document.getElementById("questionContainer").style.display = "block";
-    document.getElementById("submitButton").style.display = "block";
     document.getElementById("backButton").style.display = "none";
     startTimer();
 }
@@ -97,7 +95,7 @@ let counter = 0;
 
 /* Start Timer Function */
 function startTimer() {
-    timeLeft = 60;
+    timeLeft =60;
     let downloadTimer = setInterval(function () {
         if (timeLeft <= 0 && done === false) {
             clearInterval(downloadTimer);
@@ -111,7 +109,6 @@ function startTimer() {
         document.getElementById("timer2s").innerHTML = timeLeft;
         timeLeft -= 1;
     }, 1000);
-
 }
 
 let score = 0, correctAnswers = 0, wrongAnswers = 0;

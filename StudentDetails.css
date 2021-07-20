@@ -64,7 +64,6 @@ body .container {
     transform: scale(1.2);
 }
 
-.card:hover .details,
-card:hover .details a {
+.card:hover .details {
     transform: none;
 }
