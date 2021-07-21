@@ -1,249 +1,13 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Open Sans", sans-serif;
-}
+/* Starting of designing Products page */
 
-body {
-  position: relative;
-  min-height: 100vh;
-  width: 100%;
-  overflow-x: hidden;
-}
-
-.sidebar {
-  position: fixed;
-  top: 0;
-  left: 0%;
-  height: 100%;
-  width: 78px;
-  background: #14213d;
-  padding: 6px 14px;
-  transition: all 0.5s ease;
-}
-
-.sidebar.active {
-  width: 240px;
-}
-
-.sidebar .logo_content .logo {
-  color: #fff;
-  display: flex;
-  height: 50px;
-  width: 100%;
-  align-items: center;
-  pointer-events: none;
-  opacity: 0;
-  pointer-events: none;
-}
-
-.sidebar.active .logo_content .logo {
-  opacity: 1;
-  pointer-events: none;
-  color: #fca31f;
-}
-
-.logo_content .logo i {
-  font-size: 28px;
-  margin-left: 20px;
-  margin-right: 10px;
-}
-
-.logo_content .logo .logo_name {
-  font-size: 20px;
-  font-family: "Montserrat", sans-serif;
-}
-
-.sidebar #btn {
-  position: absolute;
-  color: #fff;
-  left: 50%;
-  top: 6px;
-  font-size: 20px;
-  height: 50px;
-  width: 50px;
-  text-align: center;
-  line-height: 50px;
-  transform: translateX(-50%);
-}
-
-.sidebar.active #btn {
-  left: 90%;
-}
-
-.sidebar ul {
-  margin-top: 20px;
-}
-
-.sidebar ul li {
-  position: relative;
-  height: 50px;
-  width: 100%;
-  list-style: none;
-  line-height: 50px;
-}
-.sidebar.active ul li {
-  margin: 0 5px;
-}
-
-.sidebar ul li .tooltip {
-  position: absolute;
-  left: 122px;
-  top: 0%;
-  transform: translate(-50%, -50%);
-  border-radius: 6px;
-  height: 35px;
-  width: 122px;
-  background: #fca31f;
-  color: #fff;
-  line-height: 35px;
-  text-align: center;
-  box-shadow: 0 5px 10px #9c9c9c;
-  transition: 0s;
-  opacity: 0;
-  pointer-events: none;
-}
-
-.sidebar.active ul li .tooltip {
-  display: none;
-  z-index: 99;
-}
-
-.sidebar ul li:hover .tooltip {
-  transition: all 0.5s ease;
-  top: 50%;
-  opacity: 1;
-  z-index: 99;
-}
-
-.sidebar ul li a {
-  color: #fff;
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  transition: all 0.4s ease;
-  border-radius: 12px;
-  white-space: nowrap;
-}
-
-.sidebar ul li a:hover {
-  color: #14213d;
-  background: #fff;
-}
-
-.sidebar ul li a i {
-  height: 50px;
-  min-width: 50px;
-  border-radius: 12px;
-  line-height: 50px;
-  text-align: center;
-}
-
-.sidebar .links_name {
-  opacity: 0;
-  pointer-events: none;
-  transition: all 0.5s ease;
-}
-
-.sidebar.active .links_name {
-  opacity: 1;
-  pointer-events: auto;
-}
-
-.sidebar .profile_content {
-  position: absolute;
-  width: 100%;
-  background-color: #fca31f;
-  color: #fff;
-  bottom: 0%;
-  left: 0%;
-  transition: all 0.5s ease;
-  border: solid 3px #fca31f;
-}
-.sidebar .profile_content:hover {
-  background-color: #fff;
-  color: #fca31f;
-}
-.sidebar .profile_content .profile {
-  position: relative;
-  padding: 10px 6px;
-  height: 60px;
-}
-
-.profile_content .profile .profile_details {
-  display: flex;
-  align-items: center;
-}
-
-.profile .profile_details i {
-  position: absolute;
-  font-size: 1.5em;
-  margin-left: 18px;
-  margin-top: 10px;
-}
-.sidebar.active.profile_details i {
-  margin-left: 24px;
-}
-
-.sidebar.active .profile .profile_details .text_1 {
-  font-family: "Montserrat", sans-serif;
-  font-size: 15px;
-  margin-left: 70px;
-  margin-top: 2px;
-  opacity: 1;
-}
-
-.sidebar.active .profile .profile_details .text_2 {
-  font-size: 12px;
-  font-weight: 400;
-  margin-left: 70px;
-  opacity: 1;
-}
-
-.sidebar .text_1,
-.text_2 {
-  opacity: 0;
-  pointer-events: none;
-}
-.tooltipPgEdit {
-  position: relative;
-  display: inline-block;
-}
-
-.tooltipPgEdit .tooltiptext {
-  position: absolute;
-  top: -15px;
-  left: 73px;
-  opacity: 0;
-  height: 35px;
-  width: 122px;
-  background: #fca31f;
-  color: #fff;
-  text-align: center;
-  border-radius: 6px;
-  padding: 5px 0;
-  z-index: 99;
-  box-shadow: 0 5px 10px #9c9c9c;
-  transition: all 0.5s ease;
-}
-
-.tooltipPgEdit:hover .tooltiptext {
-  top: 10px;
-  opacity: 1;
-}
-.sidebar.active .tooltiptext {
-  opacity: 0;
-}
-
+/* design the heading of the page */
 .home_content {
   position: absolute;
   min-height: 100%;
   width: calc(100% - 240px);
   left: 78px;
   transition: all 0.5s ease;
+  z-index: unset;
 }
 
 .home_content .text {
@@ -263,9 +27,7 @@ body {
   left: 240px;
 }
 
-/* Store */
-
-/* Main Div */
+/* Styling two div boxes which is contain all the product items */
 .slider-box {
   position: absolute;
   display: flex;
@@ -280,7 +42,7 @@ body {
   top: 52%;
   left: 0.5%;
 }
-/* 6 items divs */
+/* 6 product items div boxes */
 .items {
   position: relative;
   border: 1px solid rgba(20, 33, 61, 1);
@@ -296,13 +58,12 @@ body {
   background: rgba(20, 33, 61, 0.2);
   font-weight: bold;
 }
-/* img div */
+/* img div for each product item(handling image inside item) */
 .img-box {
   position: absolute;
-
   height: 100%;
   width: 100%;
-  z-index: -1;
+  z-index: -2;
 }
 /* images */
 .img-box img {
@@ -310,19 +71,20 @@ body {
   width: 100%;
   height: 100%;
 }
-/* new */
+/* releas year in top right corner */
 .time {
   position: absolute;
   top: 0px;
   right: 10px;
   color: #f5f5f5;
 }
-/* code */
+/* item code in top left corner */
 .code {
   position: absolute;
   top: 0px;
   left: 10px;
   color: #f5f5f5;
+  z-index: -1;
 }
 /* name & price P tag */
 .detail {
@@ -365,7 +127,7 @@ body {
   height: 25px;
   color: #f5f5f5;
 }
-/* Background image on hover*/
+/* image inside item div visible on hover*/
 .back {
   position: absolute;
   width: 100%;
@@ -631,6 +393,8 @@ legend sup input {
   border-color: rgba(20, 33, 61, 1);
   color: rgba(20, 33, 61, 1);
 }
+
+/* 6 cart item div boxes appear on clicking Add to Cart btn */
 .cart-form {
   position: relative;
   width: 450px;
@@ -650,9 +414,13 @@ legend sup input {
 .cart-form ul {
   text-align: center;
 }
+
+/* item code inside form */
 .div-code {
   color: rgba(252, 163, 17, 1);
 }
+
+/* quantity increment btn */
 .cart-form ul li .plus {
   position: relative;
   width: 20px;
@@ -661,6 +429,8 @@ legend sup input {
   background: rgba(252, 163, 17, 1);
   color: rgba(20, 33, 61, 1);
 }
+
+/* Quantity decrement btn */
 .cart-form ul li .minus {
   position: relative;
   width: 20px;
@@ -669,6 +439,8 @@ legend sup input {
   background: rgba(252, 163, 17, 1);
   color: rgba(20, 33, 61, 1);
 }
+
+/* remove from cart btn */
 .remove {
   position: relative;
   width: 60px;
@@ -678,6 +450,7 @@ legend sup input {
   color: rgba(20, 33, 61, 1);
 }
 
+/* for all the items inside form */
 .form-details {
   position: relative;
   display: flex;
@@ -686,6 +459,8 @@ legend sup input {
   margin: 3px;
   left: 5px;
 }
+
+/* personal details section inside form */
 .personal-details {
   position: relative;
   margin: 5px;
@@ -693,6 +468,8 @@ legend sup input {
   top: 5px;
   font-weight: bold;
 }
+
+/* total quantity shown head of the form */
 .qty {
   text-align: center;
   font-weight: bold;
@@ -701,6 +478,8 @@ legend sup input {
   text-align: center;
   font-weight: bold;
 }
+
+/* total price inside form */
 .total {
   position: relative;
   display: flex;
@@ -711,6 +490,8 @@ legend sup input {
   display: none;
   font-size: 20px;
 }
+
+/* 2 lighth indicators inside form */
 
 .indicator-mail {
   position: absolute;
@@ -737,12 +518,13 @@ legend sup input {
   box-shadow: 0 0 5px #0f0, 0 0 10px #0f0, 0 0 20px #0f0, 0 0 40px #0f0; */
   background: gray;
 }
+
 /* form logo rotation*/
 #form-logo {
   position: fixed;
   font-size: 300px;
-  right: 5%;
-  bottom: 0%;
+  right: 10%;
+  bottom: 12%;
   opacity: 0.8;
   z-index: -1;
   animation: formLogo 5s linear infinite;
@@ -756,6 +538,7 @@ legend sup input {
   }
 }
 
+/* reset btn inside form */
 #reset {
   position: relative;
   width: 50px;
@@ -764,6 +547,8 @@ legend sup input {
   background-color: rgba(252, 163, 17, 1);
   font-weight: bold;
 }
+
+/* Place order btn inside form */
 #place-order {
   position: relative;
   width: 250px;
@@ -794,6 +579,7 @@ textarea {
   font-weight: bold;
   font-size: 14px;
   border-radius: 5px;
+  text-transform: capitalize;
 }
 #bill-label {
   font-weight: bold;
@@ -814,6 +600,7 @@ textarea {
   display: none;
 }
 
+/* the auto changing images on background */
 #back-img {
   position: fixed;
   z-index: -5;

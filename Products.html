@@ -4,12 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <title>PRODUCTS</title>
-    <link rel="stylesheet" href="./Products.css">
+    <link rel="stylesheet" href="./theme.css">
     <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./Products.css">
+    
 </head>
 
 <body>
+    <!-- Running images on background -->
     <img src="./images/superman.jpg" alt="image_background" id="back-img">
+
+    <!-- Starting of Nav Bar -->
     <div class="sidebar">
         <div class="logo_content">
             <div class="logo">
@@ -55,7 +60,7 @@
                 <span class="tooltip">Site Map</span>
             </li>
             <li>
-                <a href="./Student Details.html">
+                <a href="./StudentDetails.html">
                     <i class="bx bxs-user-detail"></i>
                     <span class="links_name">Student Details</span>
                 </a>
@@ -86,13 +91,19 @@
             </div>
         </a>
     </div>
+    <!-- end of Nav Bar -->
 
-    <!-- Store -->
-
+    <!-- Starting of Buy Products page -->
     <div class="home_content">
         <div class="text" id="home-text">LUMIÈRE - STORE<i class="bx bx-cart-alt"></i> </div>
+
+        <!-- Done! btn which will appear with invoice -->
         <button id="done">DONE!</button>
+
+        <!-- Div box 1 for products items in line 1 -->
         <div class="slider-box" id="slider-box1">
+
+            <!-- 3 Product item boxes inside that box -->
             <div class="items" id="item1">
                 <p class="time">2019</p>
                 <p class="code">001</p>
@@ -135,8 +146,11 @@
             </div>
             
         </div>
+
+        <!-- Div box 2 for products items in line 2 -->
         <div class="slider-box" id="slider-box2">
             
+            <!-- 3 Product item boxes inside that box -->
             <div class="items" id="item4">
                 <p class="time">2020</p>
                 <p class="code">004</p>
@@ -176,12 +190,15 @@
                 </div>
                 <div class="back" id="back6"></div>
             </div>
- 
+
         </div>
 
+        <!-- Starting of Form -->
         <form class="form" id="my-form">
             <fieldset class="fieldset" id="my-fieldset">
                 <legend>CART <sup><input type="text" value="0" size="1" id="qtycart" ></sup></legend>
+
+                <!-- 6 div boxes inside form which are appear after clickcing Add to Cart btn -->
                 <div class="cart-form" id="div1">
                     <ul>
                         <li class="div-code">001</li>
@@ -243,12 +260,13 @@
                     </ul>
                 </div>
 
+                <!-- Showing total inside cart items -->
                 <div class="total" id="total">
                     <label for="total" >Total - </label>
                     <input type="text" name="total" value="0" id="qtytotal">
                 </div>
                 
-
+                <!-- Personal Details Section inside form -->
                 <h3 class="personal-details">PERSONAL DETAILS</h3>
 
                 <div class="form-details">
@@ -268,11 +286,12 @@
                     <button id="place-order">PLACE ORDER</button>
                 </div>
 
+                <!-- Rotating logo inside form -->
                 <div id="form-logo"><i class="bx bxs-movie-play"></i></div>
                 
             </fieldset>
         </form>
-          
+        
         <!--Define Invoice-->
         
         <div id="invoice">
