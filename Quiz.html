@@ -93,10 +93,11 @@
         <h2 class="quizHeader">Welcome to the Trivia!</h2>
         <div class="infoList">
             <div class="infoTitle"><span><b>Trivia Instructions!</b></span></div>
-            <div class="info">1. You have 60 seconds to answer all questions.</div>
-            <div class="info">2. You Gain 2 points for a correct answer.</div>
-            <div class="info">3. You Lose 1 point for a wrong answer.</div>
-            <div class="info">3. Your Results will be Displayed at the end of the quiz.</div>
+            <hr>
+            <div class="info">You have 60 seconds to answer all questions.</div>
+            <div class="info">You Gain 2 points for a Correct answer.</div>
+            <div class="info">You Lose 1 point for a Wrong answer.</div>
+            <div class="info">Your Results will be Displayed at the end of the quiz.</div>
         </div>
         <div class="startButton" id="startButton" onclick="startQuiz()"><button class="buttons">Start Quiz</button></div>
     </div>
@@ -112,7 +113,7 @@
                 <progress value="0" max="60" id="progressBar"></progress>
             </div>
             <div class="timeBar"></div>
-            <div id="timer2">Time Left:<br><span id="timer2s"></span></div>
+            <div id="timer2">Time Left:<br><span id="timer2s"></span> S</div>
         </header>
         <hr>
         <!-- All Questions -->
@@ -237,27 +238,26 @@
             <hr>
             <label><input class="answer" type="radio" name="q10" value="0"> Hudson</label>
         </div>
-        <hr>
         <!-- Question Box Buttons -->
         <button class="buttons" id="backButton" onclick="goBack()">Go Back</button>
         <button class="buttons" id="submitButton" onclick="submitQuiz()">Submit</button>
-        <a id="backTop" href="#questionContainer">Back to Top</a>
+        <button class="buttons" id="backTop" onclick="backTop()">&#8607;</button>
     </div>
 
     <!-- Third Page -->
     <!-- Results Box -->
     <div class="resultContainer" id="resultContainer">
-        <div class="quizHeader">You Have Completed the Quiz!</div>
-        <div class="scoreText">
-            <span class= "scoreTag" id="scoreTag"></span>
-            <span class= "score" id="score"></span>
-            <p>You took <span id="timeTaken"></span> seconds to answer the questions!</p>
+        <div class="quizHeader">You Completed the Quiz!</div>
+        <div class="scoreBox" id="scoreBox">
+            <div class="scoreText">
+                <h2 class= "score" id="score"></h2>
+                <h3 class= "scoreTag" id="scoreTag"></h3>
+                <h3>You took <span id="timeTaken"></span> seconds to answer the questions!</h3>
+            </div>
         </div>
         <!-- Results Box Buttons -->
-        <div class="buttonsDiv" id="resSet">
-            <button id="restart" class="buttons" onclick="restartQuiz()">Replay Quiz</button>
-            <button id="checkButton" class="buttons" onclick="checkAnswers()">Check Answers</button>
-        </div>
+        <button id="restart" class="buttons" onclick="restartQuiz()">Replay Quiz</button>
+        <button id="checkButton" class="buttons" onclick="checkAnswers()">Check Answers</button>
     </div>
 
     <!-- Nav Bar Script -->

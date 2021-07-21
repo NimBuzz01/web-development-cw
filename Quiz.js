@@ -23,6 +23,7 @@ function submitQuiz() {
 
     if (completed > 0 && timeLeft > 0){
         alert("You Have Unanswered questions");
+        backTop();
         completed = 0;
         score = 0;
         correctAnswers = 0;
@@ -46,13 +47,8 @@ function submitQuiz() {
         getResults();
         done = true;
     }
-    window.scroll({
-      top: 0,
-      left: 0,
-      behavior: 'smooth'
-    });
-
 }
+
 /* Return to Results Page */
 function goBack() {
     document.getElementById("header").style.display = "none";
@@ -71,11 +67,6 @@ function checkCompletion(questionNum) {
             completed += 1;
         }
     }
-}
-
-/* Restart Quiz Function */
-function restartQuiz(){
-    window.location.reload();
 }
 
 /* Check Answers Function */
@@ -122,13 +113,13 @@ function getRadioValue(questionNum, queNum) {
             if (answer[i].value === "1"){
                 score += 2;
                 correctAnswers += 1;
-                document.getElementById(queNum).style.backgroundColor = "#9fec40";
+                document.getElementById(queNum).style.backgroundColor = "#2dbf24";
 
             } else if (answer[i].value === "0") {
                 score -= 1;
                 wrongAnswers += 1;
-                document.getElementById(queNum).style.backgroundColor = "#FF414D";
-                document.getElementById(questionNum).style.backgroundColor = "#9fec40";
+                document.getElementById(queNum).style.backgroundColor = "#ff2727";
+                document.getElementById(questionNum).style.backgroundColor = "#2dbf24";
             }
         }
     }
@@ -152,4 +143,18 @@ function getResults(){
         document.getElementById("scoreTag").innerHTML = ' Sorry! You answered ' + correctAnswers + ' out of 10 questions.';
         document.getElementById("body").style.backgroundColor = "red";
     }
+}
+
+/* Back To Top Function */
+function backTop(){
+    window.scroll({
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
+    });
+}
+
+/* Restart Quiz Function */
+function restartQuiz(){
+    window.location.reload();
 }
